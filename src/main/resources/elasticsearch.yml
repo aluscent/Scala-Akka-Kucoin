@@ -1,0 +1,26 @@
+http:
+  port: "9200"
+path:
+  data: /bitnami/elasticsearch/data
+transport:
+  tcp:
+    port: "9300"
+network:
+  host: 172.20.0.2
+  publish_host: 172.20.0.2
+  bind_host: 0.0.0.0
+node:
+  name: 65fab28a16ff
+  master: "true"
+  data: "true"
+  ingest: "false"
+discovery:
+  type: single-node
+xpack:
+  security:
+    enabled: true
+    authc:
+      api_key:
+        enabled: true
+  ml:
+    enabled: "false"
